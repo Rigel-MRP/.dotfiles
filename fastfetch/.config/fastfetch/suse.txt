@@ -1,0 +1,22 @@
+$1
+                   lllllllllll         
+                   lllllllllllllll     
+                   ll            lll   
+             llllllll    llllll   lll  
+          lllll         ll    ll   ll  
+        lll        ll  lll    lll  ll  
+      lll          ll   lll  lll   ll  
+     ll             ll    lllllllllll  
+    ll               lll               
+   lll                 llllllllllll    
+   ll              lll                 
+  lll           lllllll                
+  lll          ll                      
+   ll         ll   lllll   ll          
+   ll         ll      ll   ll          
+    ll         lll    ll  lll          
+     lll        lllllll   ll           
+      lll               lll            
+        lllll         llll             
+           llllllllllll                
+                                       
