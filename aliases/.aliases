@@ -16,7 +16,6 @@ alias gcm='git commit -m'          # Commitar com mensagem
 
 # Sistema
 
-alias h='cat ~/.history_zsh'       # Cat no histórico
 alias e='exit'                     # Encerra a sessão do terminal
 alias clr='clear'                  # Limpar a tela
 alias df='df -h'                   # Exibir uso de disco de forma legível
@@ -24,6 +23,6 @@ alias free='free -h'               # Exibir memória disponível de forma legív
 
 # Programas
 
-alias ff='fastfetch'               # Sempre inverte o "A" e o "E"
+alias ff='fastfetch'               # Sempre inverto o "A" e o "E"
 alias wifi='sudo nmtui'            # Como lembra o nome disso?
 
