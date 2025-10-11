@@ -11,9 +11,9 @@
         { nix.settings.experimental-features = ["nix-command" "flakes"]; }
         ./configuration.nix
 	./modules/dewm/cosmic.nix
+	./modules/syspkgs/default.nix
       ];
     };
-
   };
-  
+
 }

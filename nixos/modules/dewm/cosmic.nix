@@ -1,7 +1,6 @@
 { config, pkgs, ... }:
 
 {
-
   services.xserver.enable = false;
 
   services.displayManager.cosmic-greeter.enable = true;
@@ -9,8 +8,4 @@
     enable = true;
     xwayland.enable = true;
   };
-
-
-
-
 }

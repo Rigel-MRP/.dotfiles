@@ -13,10 +13,6 @@
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  #nix.settings.experimental-features = [
-  #"nix-command"
-  #"flakes"
-  #];
 
   networking.hostName = "T490";
 
@@ -76,38 +72,6 @@
     power = ''echo "$(cat /sys/class/power_supply/BAT0/status): $(cat /sys/class/power_supply/BAT0/capacity)%"'';
   };
 
-  nixpkgs.config.allowUnfree = true;
-  
-  # To search, run:
-  # $ nix search package 
-  environment.systemPackages = with pkgs; [
-    kitty 
-    tree
-  ];
-
-  programs.nano.enable = false;
-
-  fonts.packages = with pkgs; [
-    nerd-fonts.jetbrains-mono
-  ];
-
-  programs.git = {
-    enable = true;
-    config = {
-      user.name = "Rigel-MRP";
-      user.email = "git@nullsun.net";
-      init.defaultBranch = "main";
-    };
-  };
-
-  programs.firefox.enable = true;
-
-  programs.neovim = {
-    enable = true;
-    viAlias = true;
-    vimAlias = true;
-    defaultEditor = true;
-  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -140,5 +104,3 @@
   system.stateVersion = "25.05";
 
 }
-
-
