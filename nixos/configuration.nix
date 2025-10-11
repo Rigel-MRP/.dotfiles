@@ -18,7 +18,7 @@
   "flakes"
   ];
 
-  networking.hostName = "t490";
+  networking.hostName = "T490";
 
   networking.networkmanager.enable = true;
 

@@ -6,7 +6,7 @@
 
   outputs = inputs: {
 
-    nixosConfigurations.t490 = inputs.nixpkgs.lib.nixosSystem {
+    nixosConfigurations.T490 = inputs.nixpkgs.lib.nixosSystem {
       modules = [
         { nix.settings.experimental-features = ["nix-command" "flakes"]; }
         ./configuration.nix
