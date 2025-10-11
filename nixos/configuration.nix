@@ -13,10 +13,10 @@
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  nix.settings.experimental-features = [
-  "nix-command"
-  "flakes"
-  ];
+  #nix.settings.experimental-features = [
+  #"nix-command"
+  #"flakes"
+  #];
 
   networking.hostName = "T490";
 
@@ -60,15 +60,6 @@
 
   services.printing.enable = false;
 
-  services.xserver.enable = false;
-
-  services.displayManager.cosmic-greeter.enable = true;
-  services.desktopManager.cosmic = {
-    enable = true;
-    xwayland.enable = true;
-
-  };
-
   users.users.mrp = {
     isNormalUser = true;
     description = "mrp";
@@ -81,7 +72,7 @@
   environment.shellAliases = {
     svi = "sudo nvim";
     clr = "clear";
-    nrs = "sudo nixos-rebuild switch --flake /home/mrp/.config/nixos";
+    nrs = "sudo nixos-rebuild switch --flake /home/mrp/.dotfiles/nixos";
     power = ''echo "$(cat /sys/class/power_supply/BAT0/status): $(cat /sys/class/power_supply/BAT0/capacity)%"'';
   };
 
