@@ -1,12 +1,11 @@
 {
-
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
   };
 
-  outputs = inputs: {
+  outputs = { self, nixpkgs, ... }@inputs: { 
 
-    nixosConfigurations.T490 = inputs.nixpkgs.lib.nixosSystem {
+    nixosConfigurations.T490 = nixpkgs.lib.nixosSystem {
       modules = [
         { nix.settings.experimental-features = ["nix-command" "flakes"]; }
         ./configuration.nix
@@ -15,5 +14,4 @@
       ];
     };
   };
-
 }

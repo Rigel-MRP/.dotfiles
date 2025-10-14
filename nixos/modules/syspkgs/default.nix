@@ -3,11 +3,10 @@
 {
   nixpkgs.config.allowUnfree = true;
   
-  # To search, run:
-  # $ nix search package 
   environment.systemPackages = with pkgs; [
     kitty 
     tree
+
   ];
 
   programs.nano.enable = false;
