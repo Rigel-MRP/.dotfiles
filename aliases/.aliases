@@ -1,18 +1,13 @@
 # Aliases Essenciais
 
 alias ll='ls -lah'                 # Lista arquivos com detalhes
-alias la='ls -A'                   # Lista arquivos, incluindo ocultos
-alias l='ls -l'                    # Lista arquivos em formato longo
+alias la='ls -a'                   # Lista arquivos, incluindo ocultos
 
 # Comandos de Navegação
 
 alias ç='cd'                       # Um "C" com "~" em baixo
 alias ...='cd ../..'               # Volta dois diretórios
 alias ....='cd ../../..'           # Volta três diretórios
-
-# Git
-
-alias gcm='git commit -m'          # Commitar com mensagem
 
 # Sistema
 
@@ -23,6 +18,4 @@ alias free='free -h'               # Exibir memória disponível de forma legív
 
 # Programas
 
-alias ff='fastfetch'               # Sempre inverto o "A" e o "E"
-alias wifi='sudo nmtui'            # Como lembra o nome disso?
-
+alias ff='fastfetch'               # execute fastfetch
