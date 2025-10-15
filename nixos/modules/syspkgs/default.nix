@@ -6,7 +6,7 @@
   environment.systemPackages = with pkgs; [
     kitty 
     tree
-
+    home-manager
   ];
 
   programs.nano.enable = false;
