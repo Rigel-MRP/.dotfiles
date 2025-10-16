@@ -10,10 +10,6 @@
 
   programs.nano.enable = false;
 
-  fonts.packages = with pkgs; [
-    nerd-fonts.jetbrains-mono
-  ];
-
  programs.git = {
   enable = true;
   config = {
