@@ -1,4 +1,4 @@
-{ lib, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 {
   fonts.fontconfig.enable = true;
 
@@ -35,6 +35,23 @@
     '';
   };
 
+  xdg = {
+    enable = true;
+    userDirs = {
+      enable = true;
+      createDirectories = true;
+
+      desktop = "${config.home.homeDirectory}/desktop";
+      download = "${config.home.homeDirectory}/downloads";
+      templates = "${config.home.homeDirectory}/modelos";
+      publicShare = "${config.home.homeDirectory}/public";
+      documents = "${config.home.homeDirectory}/documents";
+      music = "${config.home.homeDirectory}/music";
+      pictures = "${config.home.homeDirectory}/images";
+      videos = "${config.home.homeDirectory}/videos";
+    };
+  };
+
   programs.bash.enable = true;
   programs.zsh.enable = true;
 
@@ -56,6 +73,6 @@
 
     nrs = "sudo nixos-rebuild switch --flake /home/mrp/.dotfiles/nix";
     power = ''echo "$(cat /sys/class/power_supply/BAT0/status): $(cat /sys/class/power_supply/BAT0/capacity)%"'';
-  };
+};
 }
 

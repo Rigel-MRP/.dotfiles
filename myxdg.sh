@@ -1,12 +1,13 @@
 #!/bin/bash
 
-read -p "Esse script vai mudar os nomes nos diretórios padrões da home e só deve ser executado após dar stow no 'homedirs', deseja continuar? (Y/n) " resposta
+read -p "This script will change the names in the default home directories and should only be executed after '.config/user-dirs.dirs' is properly configured by home.nix or stow in 'homedirs' (deprecated). Do you wish to continue? (Y/n) " resposta
 
 resposta=${resposta:-Y}
 
 resposta=$(echo "$resposta" | tr '[:upper:]' '[:lower:]')
 
 if [[ "$resposta" == "y" ]]; then
+    echo "Starting directory renaming process..."
     [ -d "$HOME/Documentos" ]         && mv "$HOME/Documentos" "$HOME/documents"
     [ -d "$HOME/Modelos" ]            && mv "$HOME/Modelos" "$HOME/modelos"
     [ -d "$HOME/Público" ]            && mv "$HOME/Público" "$HOME/public"
@@ -20,13 +21,13 @@ if [[ "$resposta" == "y" ]]; then
     echo ""
 
     if [ -f "$HOME/.config/user-dirs.dirs" ]; then
-            echo "Atualizando ~/.config/user-dirs.dirs..."
+            echo "Updating ~/.config/user-dirs.dirs..."
             xdg-user-dirs-update
     else
-            echo "Aviso: ~/.config/user-dirs.dirs não encontrado. Nada foi atualizado."
+            echo "Error: Failed to update ~/.config/user-dirs.dirs."
     fi
         
 else
-    echo 'Processo cancelado'
+    echo 'Process canceled'
 fi
 
