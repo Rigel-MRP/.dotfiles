@@ -51,21 +51,13 @@
     jack.enable = true;
   };
 
-  # Enable touchpad support (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true;
-
   services.printing.enable = false;
 
   users.users.mrp = {
     isNormalUser = true;
     description = "mrp";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-    #  example-package
-    ];
   };
-
-
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
