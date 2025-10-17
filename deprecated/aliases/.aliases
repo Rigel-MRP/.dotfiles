@@ -15,7 +15,10 @@ alias e='exit'                     # Encerra a sessão do terminal
 alias clr='clear'                  # Limpar a tela
 alias df='df -h'                   # Exibir uso de disco de forma legível
 alias free='free -h'               # Exibir memória disponível de forma legível
+alias power=''echo "$(cat /sys/class/power_supply/BAT0/status): $(cat /sys/class/power_supply/BAT0/capacity)%"''
 
 # Programas
 
 alias ff='fastfetch'               # execute fastfetch
+alias svi="sudo nvim"              
+alias nrs="sudo nixos-rebuild switch --flake /home/mrp/.dotfiles/nix"

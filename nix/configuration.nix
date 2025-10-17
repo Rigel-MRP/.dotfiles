@@ -65,12 +65,6 @@
     ];
   };
 
-  environment.shellAliases = {
-    svi = "sudo nvim";
-    clr = "clear";
-    nrs = "sudo nixos-rebuild switch --flake /home/mrp/.dotfiles/nix";
-    power = ''echo "$(cat /sys/class/power_supply/BAT0/status): $(cat /sys/class/power_supply/BAT0/capacity)%"'';
-  };
 
 
   # Some programs need SUID wrappers, can be configured further or are
