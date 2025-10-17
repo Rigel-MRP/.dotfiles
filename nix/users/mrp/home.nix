@@ -35,6 +35,16 @@
     '';
   };
 
+  programs.nh = {
+    enable = true;
+    flake = "/home/mrp/.dotfiles/nix/";
+    clean = {
+      enable = true;
+      dates = "weekly";
+      extraArgs = "--delete-older-than 7d";
+    };
+  };
+
   xdg = {
     enable = true;
     userDirs = {
@@ -71,7 +81,6 @@
     "..." = "../..";
     "...." = "../../..";
 
-    nrs = "sudo nixos-rebuild switch --flake /home/mrp/.dotfiles/nix";
     power = ''echo "$(cat /sys/class/power_supply/BAT0/status): $(cat /sys/class/power_supply/BAT0/capacity)%"'';
 };
 }
