@@ -7,11 +7,11 @@
      "width": 65,           // Width in characters (for image logos)
      "height": 35,          // Height in characters (for image logos)
      "padding": {
-         "top": 0,          // Top padding
-         "left": 0,         // Left padding
-         "right": 2         // Right padding
+         "top": 0,
+         "left": 0,
+         "right": 2 
      },
-     "color": {             // Do ascii 
+     "color": {             // Of ascii 
          "1": "cyan",
          "2": "cyan"
     }         
