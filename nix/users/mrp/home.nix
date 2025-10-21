@@ -3,6 +3,7 @@
 {
   imports = [
     ./modules/aliases/aliases.nix
+    ./modules/fastfetch/fastfetch.nix
     ./modules/git/git.nix
     ./modules/nh/nh.nix
     ./modules/nvim/nvim.nix
