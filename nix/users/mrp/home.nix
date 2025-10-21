@@ -2,14 +2,23 @@
 
 {
   imports = [
-    ./modules/aliases/aliases.nix
-    ./modules/fastfetch/fastfetch.nix
-    ./modules/git/git.nix
-    ./modules/nh/nh.nix
-    ./modules/nvim/nvim.nix
+    ./modules/cli/default.nix
     ./modules/xdg/xdg.nix
-    ./modules/zsh/zsh.nix
   ];
+  
+  programs = {
+    cliMod = {
+      enable = true;
+      aliases = true;
+      fastfetch = true;
+      git = true;
+      nh = true;
+      nvim = true;
+      xdg = true;
+      zsh = true;
+    };
+    xdgMod.enable = true;
+  };
 
   fonts.fontconfig.enable = true;
 
