@@ -11,5 +11,4 @@
   programs.nano.enable = false;
 
   programs.firefox.enable = true;
-
 }
