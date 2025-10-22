@@ -17,7 +17,7 @@
       homeConfigurations = {
         mrp = home-manager.lib.homeManagerConfiguration {
 	  inherit pkgs;
-	  modules = [ ./users/mrp/home.nix ];
+	  modules = [ ./home/mrp/home.nix ];
 	};
       };
       nixosConfigurations.T490 = nixpkgs.lib.nixosSystem {
