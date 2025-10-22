@@ -1,18 +1,10 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [
-      ./hardware-configuration.nix
-    ];
-
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-
-  boot.kernelPackages = pkgs.linuxPackages_latest;
-
-
-  networking.hostName = "T490";
+  imports = [
+    ./modules/dewm/cosmic.nix
+    ./modules/syspkgs.nix
+  ];
 
   networking.networkmanager.enable = true;
 
