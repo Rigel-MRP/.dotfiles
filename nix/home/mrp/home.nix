@@ -14,7 +14,6 @@
       git = true;
       nh = true;
       nvim = true;
-      xdg = true;
       zsh = true;
     };
     xdgMod.enable = true;
@@ -26,12 +25,18 @@
 
     username = "mrp";
     homeDirectory = "/home/mrp";
+    
+    sessionVariables = {
+      EDITOR = "nvim";
+      VISUAL = "nvim";
+    };
 
-    stateVersion = "25.05";
     packages = with pkgs; [
     kitty
     nerd-fonts.jetbrains-mono
     ];
+
+    stateVersion = "25.05";
   };
 
   programs.bash.enable = true;

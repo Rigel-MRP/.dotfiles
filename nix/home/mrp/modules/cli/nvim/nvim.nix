@@ -1,16 +1,19 @@
-{ config, lib, ... }:
+ { config, lib, ... }: 
 
 {
   config = lib.mkIf config.programs.cliMod.nvim {
-    programs.neovim = {
+    programs.nixvim = {
       enable = true;
       viAlias = true;
       vimAlias = true;
-      defaultEditor = true;
-      extraConfig = ''
-        set number
-        set relativenumber
-      '';
+      opts = {
+        number = true;
+        relativenumber = true;
+	tabstop = 2;
+	shiftwidth = 2;
+	termguicolors = true;
+	guicursor = { n-v-c = "block"; };
+      };
     };
   };  
 }
