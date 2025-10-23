@@ -5,11 +5,13 @@
     programs.git = {
       enable = true;
       package = pkgs.git;
-      userName = "Rigel-MRP";
-      userEmail = "git@nullsun.net";
-      extraConfig = {
+      settings = {
         core.editor = "nvim";
         init.defaultBranch = "main";
+        user = {
+	  name = "Rigel-MRP";
+          email = "git@nullsun.net";
+	};  
       };
     };
   };  
