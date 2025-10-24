@@ -5,13 +5,17 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+	  stylix = {
+      url = "github:nix-community/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     nixvim = {
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, nixvim, ... }@inputs:  
+  outputs = { self, nixpkgs, home-manager, nixvim, stylix, ... }@inputs:  
     let 
       lib = nixpkgs.lib;
       system = "x86_64-linux";
@@ -24,6 +28,7 @@
 	  modules = [
 	    ./home/mrp/home.nix
 	    nixvim.homeModules.nixvim
+			stylix.homeModules.stylix
 	  ];
 	};
       };
