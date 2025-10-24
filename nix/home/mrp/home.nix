@@ -3,6 +3,7 @@
 {
   imports = [
     ./modules/cli/default.nix
+		./modules/stylix/stylix.nix
     ./modules/xdg/xdg.nix
   ];
   
@@ -33,6 +34,7 @@
 
     packages = with pkgs; [
     kitty
+		base16-schemes
     nerd-fonts.jetbrains-mono
     ];
 
