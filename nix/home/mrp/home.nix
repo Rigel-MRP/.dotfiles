@@ -3,6 +3,7 @@
 {
   imports = [
     ./modules/cli/default.nix
+		./modules/librewolf/librewolf.nix
 		./modules/stylix/stylix.nix
     ./modules/xdg/xdg.nix
   ];
@@ -17,6 +18,7 @@
       nvim = true;
       zsh = true;
     };
+		LibreWolfMod.enable = true;
     xdgMod.enable = true;
   };
 
