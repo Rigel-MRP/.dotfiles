@@ -35,9 +35,10 @@
     };
 
     packages = with pkgs; [
-    kitty
 		base16-schemes
+    kitty
     nerd-fonts.jetbrains-mono
+		ripgrep
     ];
 
     stateVersion = "25.05";

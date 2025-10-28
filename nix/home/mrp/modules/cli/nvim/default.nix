@@ -25,6 +25,7 @@
 
 	imports = [
 		./plugins/harpoon.nix
+		./plugins/telescope.nix
 		./plugins/vim-be-good.nix
 	];	
 }
