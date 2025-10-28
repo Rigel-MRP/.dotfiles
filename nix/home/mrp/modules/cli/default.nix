@@ -17,7 +17,7 @@
     ./fastfetch/fastfetch.nix
     ./git/git.nix
     ./nh/nh.nix
-    ./nvim/nvim.nix
+    ./nvim/default.nix
     ./zsh/zsh.nix
   ];
 } 
