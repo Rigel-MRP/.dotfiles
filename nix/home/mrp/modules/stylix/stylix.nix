@@ -4,7 +4,7 @@
   stylix = {
 	  enable = true;
 		autoEnable = true;
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/ayu-dark.yaml";
 		polarity = "dark";
 		targets = {
       # kitty.enable = true;
