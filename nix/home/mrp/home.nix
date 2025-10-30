@@ -36,6 +36,7 @@
 
     packages = with pkgs; [
 		base16-schemes
+		btop
     kitty
     nerd-fonts.jetbrains-mono
 		ripgrep
