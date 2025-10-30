@@ -35,8 +35,9 @@
     };
 
     packages = with pkgs; [
-    kitty
 		base16-schemes
+		btop
+    kitty
     nerd-fonts.jetbrains-mono
     ];
 
