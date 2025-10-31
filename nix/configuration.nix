@@ -8,6 +8,7 @@
     ./modules/locale.nix
     ./modules/syspkgs.nix
     ./modules/users/mrp.nix
+		./modules/virt.nix
   ];
 
   networking.networkmanager.enable = true;
@@ -22,6 +23,11 @@
       layout = "ibm";
     };
   };  
+
+	virtMod = {
+		enable = true;
+		gui = true;
+	};
 
   services.printing.enable = false;
 

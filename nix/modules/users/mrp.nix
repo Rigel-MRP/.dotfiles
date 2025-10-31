@@ -6,6 +6,6 @@
     description = "mrp";
     ignoreShellProgramCheck = true;
     shell = pkgs.zsh;
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
   };
 }
