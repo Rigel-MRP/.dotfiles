@@ -24,9 +24,10 @@ with lib;
 		};	
 
 		environment.systemPackages = with pkgs; [
+			OVMF
 			qemu_kvm
 			qemu-utils
-			OVMF
+			quickemu
 			swtpm
 		] ++ lib.optional config.virtMod.gui virt-manager;
 
