@@ -40,6 +40,8 @@
     kitty
     nerd-fonts.jetbrains-mono
 		ripgrep
+
+		obs-studio
     ];
 
     stateVersion = "25.05";
