@@ -6,7 +6,8 @@ with lib;
   config = mkIf (config.programs.dewm.desktop == "cosmic") {
     services.xserver.enable = false;
 
-    services.displayManager.cosmic-greeter.enable = true;
+    # services.displayManager.cosmic-greeter.enable = true;
+		services.displayManager.ly.enable = true;
     services.desktopManager.cosmic = {
       enable = true;
       xwayland.enable = true;
