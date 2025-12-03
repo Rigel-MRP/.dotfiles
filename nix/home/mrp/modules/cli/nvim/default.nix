@@ -20,6 +20,15 @@
 				termguicolors = true;
 				guicursor = { n-v-c = "block"; };
 			};
+
+			autoCmd = [
+				{
+					event = "VimEnter";
+					pattern = "*";
+					command = "if argc() == 0 | exe 'Explore' | endif";
+					nested = true;
+				}
+			];
 		};
   };  
 
