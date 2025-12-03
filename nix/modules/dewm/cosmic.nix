@@ -16,5 +16,7 @@ with lib;
 		environment.cosmic.excludePackages = with pkgs; [
 			cosmic-term
 		];
+
+		environment.systemPackages = [ pkgs.wl-clipboard ];
   };  
 }
