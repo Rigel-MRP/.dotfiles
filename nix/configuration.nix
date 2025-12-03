@@ -13,7 +13,7 @@
 
   networking.networkmanager.enable = true;
 
-  programs = {
+  custom = {
     dewm = {
       enable = true;
       desktop = "cosmic";
@@ -22,12 +22,12 @@
       enable = true;
       layout = "ibm";
     };
+		virt = {
+			enable = true;
+			gui = true;
+		};
   };  
 
-	virtMod = {
-		enable = true;
-		gui = true;
-	};
 
   services.printing.enable = false;
 

@@ -1,7 +1,7 @@
 { config, lib, ... }:
 
 {
-  config = lib.mkIf config.programs.cliMod.aliases {
+  config = lib.mkIf config.custom.cli.aliases {
     home.shellAliases = {
       ls = "ls --color";
       ll = "ls -lah --color";

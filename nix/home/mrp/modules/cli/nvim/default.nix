@@ -1,7 +1,7 @@
  { config, lib, ... }: 
 
 {
-	config = lib.mkIf config.programs.cliMod.nvim {
+		config = lib.mkIf config.custom.cli.nvim {
 		programs.nixvim = {
 			enable = true;
 			viAlias = true;

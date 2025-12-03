@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }:
 
 {  
-  config = lib.mkIf config.programs.cliMod.zsh {
+  config = lib.mkIf config.custom.cli.zsh {
     programs.zsh = {
       enable = true;
       enableCompletion = true;

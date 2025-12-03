@@ -3,7 +3,7 @@
 with lib;
 
 {
-  options.programs.keyboard = {
+		options.custom.keyboard = {
     enable = mkEnableOption "enable keyboard";
     layout = mkOption {
       type = types.enum [ "abnt2" "anci" "ibm" ];
@@ -12,12 +12,12 @@ with lib;
     };
   };
 
-  config = mkIf config.programs.keyboard.enable {
+  config = mkIf config.custom.keyboard.enable {
     services.xserver.xkb = {
-      layout = if config.programs.keyboard.layout == "anci" then "us" else "br";
-      variant = if config.programs.keyboard.layout == "ibm" then "thinkpad" else "";
+      layout = if config.custom.keyboard.layout == "anci" then "us" else "br";
+      variant = if config.custom.keyboard.layout == "ibm" then "thinkpad" else "";
     };
 
-    console.keyMap = if config.programs.keyboard.layout == "anci" then "us" else "br-abnt2";
+    console.keyMap = if config.custom.keyboard.layout == "anci" then "us" else "br-abnt2";
   };
 }

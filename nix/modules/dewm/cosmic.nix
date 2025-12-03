@@ -3,7 +3,7 @@
 with lib;
 
 {
-  config = mkIf (config.programs.dewm.desktop == "cosmic") {
+  config = mkIf (config.custom.dewm.desktop == "cosmic") {
     services.xserver.enable = false;
 
     # services.displayManager.cosmic-greeter.enable = true;

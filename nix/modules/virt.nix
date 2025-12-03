@@ -3,7 +3,7 @@
 with lib;
 
 {
-	options.virtMod = {
+	options.custom.virt = {
 		enable = mkEnableOption "enable KVM/QEMU virtualization with libvirt";
 		gui = mkOption {
 			type = types.bool;
@@ -12,7 +12,7 @@ with lib;
 		};
 	};	
 
-	config = mkIf config.virtMod.enable {
+	config = mkIf config.custom.virt.enable {
 		virtualisation.libvirtd = {
 			enable = true;
 			onBoot = "start";
@@ -29,7 +29,7 @@ with lib;
 			qemu-utils
 			quickemu
 			swtpm
-		] ++ lib.optional config.virtMod.gui virt-manager;
+		] ++ lib.optional config.custom.virt.gui virt-manager;
 
 		boot.kernelModules = [ "kvm-intel" ];
 	

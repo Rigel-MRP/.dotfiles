@@ -8,8 +8,8 @@
     ./modules/xdg/xdg.nix
   ];
   
-  programs = {
-    cliMod = {
+  custom = {
+    cli = {
       enable = true;
       aliases = true;
       fastfetch = true;
@@ -18,8 +18,8 @@
       nvim = true;
       zsh = true;
     };
-		LibreWolfMod.enable = true;
-    xdgMod.enable = true;
+		LibreWolf.enable = true;
+    xdg.enable = true;
   };
 
   fonts.fontconfig.enable = true;

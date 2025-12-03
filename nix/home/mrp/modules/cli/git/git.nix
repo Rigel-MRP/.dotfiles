@@ -1,7 +1,7 @@
 { pkgs, config, lib, ... }:
 
 {
-  config = lib.mkIf config.programs.cliMod.git {
+  config = lib.mkIf config.custom.cli.git {
     programs.git = {
       enable = true;
       package = pkgs.git;
@@ -9,9 +9,9 @@
         core.editor = "nvim";
         init.defaultBranch = "main";
         user = {
-	  name = "Rigel-MRP";
+					name = "Rigel-MRP";
           email = "git@nullsun.net";
-	};  
+				};  
       };
     };
   };  

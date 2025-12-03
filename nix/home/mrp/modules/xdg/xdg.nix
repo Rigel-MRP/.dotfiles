@@ -1,11 +1,11 @@
 {config, lib, ... }:
 
 {
-  options.programs.xdgMod = {
+  options.custom.xdg = {
     enable = lib.mkEnableOption "xdg module";
   };
 
-  config = lib.mkIf config.programs.xdgMod.enable {
+  config = lib.mkIf config.custom.xdg.enable {
     xdg = {
       enable = true;
       userDirs = {

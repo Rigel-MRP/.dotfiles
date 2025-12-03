@@ -1,14 +1,13 @@
 { config, lib, ... }:
 
 {
-  options.programs.cliMod = {
+  options.custom.cli = {
     enable = lib.mkEnableOption "cli module";
     aliases = lib.mkEnableOption "activate aliases submodule";
     fastfetch = lib.mkEnableOption "activate fastfetch submodule";
     git = lib.mkEnableOption "activate git submodule";
     nh = lib.mkEnableOption "activate nh submodule";
     nvim = lib.mkEnableOption "activate nvim submodule";
-    xdg = lib.mkEnableOption "activate xdg submodule";
     zsh = lib.mkEnableOption "activate zsh submodule";
   };
 

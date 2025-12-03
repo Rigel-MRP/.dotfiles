@@ -5,7 +5,7 @@ let
   color2 = "magenta";
 in
 {
-  config = lib.mkIf config.programs.cliMod.fastfetch { 
+  config = lib.mkIf config.custom.cli.fastfetch { 
     programs.fastfetch = {
       enable = true;
       settings = {

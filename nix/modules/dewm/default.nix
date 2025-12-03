@@ -3,7 +3,7 @@
 with lib;
 
 {
-  options.programs.dewm = {
+  options.custom.dewm = {
     enable = mkEnableOption "enables DE/WM manager module";
     desktop = mkOption {
       type = types.enum [ "none" "cosmic" ];
