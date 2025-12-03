@@ -3,7 +3,7 @@
 with lib;
 
 {
-		options.custom.keyboard = {
+	options.custom.keyboard = {
     enable = mkEnableOption "enable keyboard";
     layout = mkOption {
       type = types.enum [ "abnt2" "anci" "ibm" ];
