@@ -34,14 +34,15 @@
       VISUAL = "nvim";
     };
 
+		sessionPath = [ "$HOME/.local/bin" ];
+
     packages = with pkgs; [
 		base16-schemes
 		btop
     kitty
     nerd-fonts.jetbrains-mono
-		ripgrep
-
 		obs-studio
+		ripgrep
     ];
 
     stateVersion = "25.05";
