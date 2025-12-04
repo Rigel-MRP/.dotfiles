@@ -1,13 +1,13 @@
 { pkgs, ... }:
 
 {
-  stylix = {
-	  enable = true;
+	stylix = {
+		enable = true;
 		autoEnable = true;
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/ayu-dark.yaml";
+		base16Scheme = "${pkgs.base16-schemes}/share/themes/ayu-dark.yaml";
 		polarity = "dark";
 		targets = {
-      # kitty.enable = true;
+			# kitty.enable = true;
 		};
-  };	 
+	};	 
 }

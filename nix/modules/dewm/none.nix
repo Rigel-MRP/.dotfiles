@@ -3,7 +3,7 @@
 with lib;
 
 {
-  config = mkIf (config.custom.dewm.desktop == "none") {
-    services.xserver.enable = false;
-  };  
+	config = mkIf (config.custom.dewm.desktop == "none") {
+		services.xserver.enable = false;
+	};  
 }

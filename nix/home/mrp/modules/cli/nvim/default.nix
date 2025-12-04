@@ -30,7 +30,7 @@
 				}
 			];
 		};
-  };  
+	};  
 
 	imports = [
 		./plugins/harpoon.nix

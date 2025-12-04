@@ -1,14 +1,14 @@
 { config, pkgs, ... }:
 
 {
-  nixpkgs.config.allowUnfree = true;
-  
-  environment.systemPackages = with pkgs; [
-    tree
-    home-manager
-  ];
+	nixpkgs.config.allowUnfree = true;
+	
+	environment.systemPackages = with pkgs; [
+		tree
+		home-manager
+	];
 
-  programs.nano.enable = false;
+	programs.nano.enable = false;
 
-  programs.firefox.enable = true;
+	programs.firefox.enable = true;
 }
