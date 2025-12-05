@@ -18,7 +18,7 @@
 			nvim = true;
 			zsh = true;
 		};
-		LibreWolf.enable = true;
+		LibreWolf.enable = false;
 		xdg.enable = true;
 	};
 
