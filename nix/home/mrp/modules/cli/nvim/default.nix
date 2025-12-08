@@ -1,7 +1,7 @@
  { config, lib, ... }: 
 
 {
-		config = lib.mkIf config.custom.cli.nvim {
+	config = lib.mkIf config.custom.cli.nvim {
 		programs.nixvim = {
 			enable = true;
 			viAlias = true;
@@ -34,6 +34,7 @@
 
 	imports = [
 		./plugins/harpoon.nix
+		./plugins/indent-blankline.nix
 		./plugins/telescope.nix
 		./plugins/vim-be-good.nix
 	];	
